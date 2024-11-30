@@ -55,7 +55,7 @@ const (
 
 	UNKNOWN = "unknown"
 
-	currentNBASeason = "2023"
+	currentNBASeason = "2024"
 	NBADateFormat    = "02/01/2006"
 )
 

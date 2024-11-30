@@ -355,6 +355,7 @@
             "mercurial",
             "mojo",
             "mvn",
+            "nba",
             "nbgv",
             "nightscout",
             "nix-shell",
@@ -3130,6 +3131,40 @@
                       "metric",
                       "imperial"
                     ]
+                  },
+                  "http_timeout": {
+                    "$ref": "#/definitions/http_timeout"
+                  }
+                }
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "nba"
+              }
+            }
+          },
+          "then": {
+            "title": "NBA Segment",
+            "description": "Displays information about your favorite NBA team",
+            "properties": {
+              "properties": {
+                "properties": {
+                  "team": {
+                    "type": "string",
+                    "title": "Team",
+                    "description": "The NBA team tri-code (e.g., LAL for Los Angeles Lakers)",
+                    "default": "LAL"
+                  },
+                  "days_offset": {
+                    "type": "integer",
+                    "title": "Days Offset",
+                    "description": "Number of days in advance to retrieve game information",
+                    "default": 8
                   },
                   "http_timeout": {
                     "$ref": "#/definitions/http_timeout"

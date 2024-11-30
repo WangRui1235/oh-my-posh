@@ -4,15 +4,18 @@
     {
       "alignment": "left",
       "segments": [
-        {
-          "background": "#c386f1",
-          "foreground": "#ffffff",
-          "leading_diamond": "\ue0b6",
-          "style": "diamond",
-          "template": " {{ .UserName }} ",
-          "trailing_diamond": "\ue0b0",
-          "type": "session"
-        },
+      {
+        "background": "#e9ac2f",
+        "foreground": "#8748dc",
+        "leading_diamond": "",
+        "style": "diamond",
+        "trailing_diamond": "",
+        "type": "nba",
+        "properties": {
+          "team": "LAL",
+          "http_timeout": 1500
+        }
+      },
         {
           "background": "#ff479c",
           "foreground": "#ffffff",
