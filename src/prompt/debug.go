@@ -64,6 +64,15 @@ func (e *Engine) PrintDebug(startTime time.Time, version string) string {
 		}
 		segmentName := fmt.Sprintf("%s(%s)", segment.Name(), active.Plain())
 		e.write(fmt.Sprintf("%-*s - %3d ms\n", largestSegmentNameLength, segmentName, duration))
+		e.write(fmt.Sprintf(
+			"%-*s | Type: %s | Background: %s | Foreground: %s - %3d ms\n",
+			largestSegmentNameLength,
+			segmentName,
+			segment.Type,
+			segment.Background,
+			segment.Foreground,
+			duration,
+		))
 	}
 
 	e.write(fmt.Sprintf("\n%s %s\n", log.Text("Run duration:").Green().Bold().Plain(), time.Since(startTime)))

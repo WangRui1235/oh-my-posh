@@ -84,5 +84,5 @@
   // This is running the same command as the VSCode Task 'devcontainer: rebuild oh-my-posh'
   // It Compiles *oh-my-posh* from this repo while **overwriting** your preinstalled stable release.'
   // Ideal for getting straight into developing & testing whilst using a devcontainer
-  "updateContentCommand": "cd src && go build -v -buildvcs=false -o /home/vscode/bin/oh-my-posh -ldflags \"-s -w -X 'github.com/jandedobbeleer/oh-my-posh/src/build.Version=development-$(git --no-pager log -1 --pretty=%h-%s)' -extldflags '-static'\""
+  "updateContentCommand": "cd src && go build -v -buildvcs=false -o /home/vscode/bin/oh-my-posh -ldflags \"-s -w -X 'github.com/WangRui1235/oh-my-posh/src/build.Version=development-$(git --no-pager log -1 --pretty=%h-%s)' -extldflags '-static'\""
 }
